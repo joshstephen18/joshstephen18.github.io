@@ -74,12 +74,14 @@
         .card {
             background: #1e293b;
             padding: 1.5rem;
-            border-radius: 10px;
-            transition: 0.3s;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
         }
 
         .card h3 {
@@ -90,6 +92,18 @@
             color: #94a3b8;
             font-size: 0.95rem;
             margin-bottom: 0.5rem;
+        }
+
+        /* IMAGE HOVER EFFECT */
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.08);
         }
 
         .skills span {
@@ -118,14 +132,12 @@
 
 <div class="container">
 
-    <!-- Header -->
     <header>
         <h1>Josh Stephen</h1>
         <p>Software Engineering | Python Developer</p>
         <a class="btn" href="https://github.com/joshstephen18" target="_blank">View My GitHub</a>
     </header>
 
-    <!-- About Me -->
     <section>
         <h2>About Me</h2>
         <p>
@@ -135,19 +147,15 @@
         </p>
     </section>
 
-    <!-- Projects -->
     <section>
         <h2>Projects</h2>
         <div class="projects">
 
             <div class="card">
                 <h3>Biometric Data Analysis – Steps vs Resting Heart Rate</h3>
-                <img src="images/biometric_analysis.png" 
-                     alt="Biometric Analysis Screenshot" 
-                     style="width:100%; border-radius:8px; margin-bottom:1rem;">
+                <img src="images/biometric_analysis.png" alt="Biometric Analysis Screenshot">
                 <p>
-                    Analyzed biometric datasets to explore the relationship between daily steps and resting heart rate using Pandas and NumPy. 
-                    Visualized trends with Matplotlib to generate meaningful insights.
+                    Analyzed biometric datasets to explore the relationship between daily steps and resting heart rate.
                 </p>
                 <p><strong>Tech Stack:</strong> Python, Pandas, Matplotlib</p>
                 <a class="btn" href="https://github.com/joshstephen18/Biometric_Data_Analysis-Steps_vs_Resting_Heart_Rate" target="_blank">
@@ -157,11 +165,9 @@
 
             <div class="card">
                 <h3>DNA Sequence Toolkit</h3>
-                <img src="images/dna_toolkit.png" 
-                     alt="DNA Toolkit Screenshot" 
-                     style="width:100%; border-radius:8px; margin-bottom:1rem;">
+                <img src="images/dna_toolkit.png" alt="DNA Toolkit Screenshot">
                 <p>
-                    Developed a Python toolkit for processing and analyzing DNA sequences, including sequence validation, pattern detection, and bioinformatics utilities.
+                    Developed a Python toolkit for processing and analyzing DNA sequences.
                 </p>
                 <p><strong>Tech Stack:</strong> Python, NumPy, Matplotlib</p>
                 <a class="btn" href="https://github.com/joshstephen18/DNA_Sequence_Toolkit" target="_blank">
@@ -171,11 +177,9 @@
 
             <div class="card">
                 <h3>Chest X-ray Pneumonia Image Analysis</h3>
-                <img src="images/chest_xray_analysis.png" 
-                     alt="Chest X-ray Analysis Screenshot" 
-                     style="width:100%; border-radius:8px; margin-bottom:1rem;">
+                <img src="images/chest_xray_analysis.png" alt="Chest X-ray Analysis Screenshot">
                 <p>
-                    Built an image analysis pipeline to classify chest X-ray images for pneumonia detection. Implemented preprocessing, visualization, and evaluation techniques in Python.
+                    Built an image analysis pipeline to classify chest X-ray images for pneumonia detection.
                 </p>
                 <p><strong>Tech Stack:</strong> Python, NumPy, Matplotlib, OpenCV (cv2)</p>
                 <a class="btn" href="https://github.com/joshstephen18/Chest_X-ray_Pneumonia_Image_Analysis" target="_blank">
@@ -186,7 +190,6 @@
         </div>
     </section>
 
-    <!-- Skills -->
     <section>
         <h2>Skills</h2>
         <div class="skills">
@@ -201,7 +204,6 @@
         </div>
     </section>
 
-    <!-- Contact -->
     <section>
         <h2>Contact</h2>
         <p>Email: <a href="mailto:joshstephen18@gmail.com">joshstephen18@gmail.com</a></p>
